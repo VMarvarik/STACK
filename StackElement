@@ -1,0 +1,9 @@
+public class StackElement<T> {
+    T object;
+    StackElement<T> linkNextElement;
+
+    public StackElement(T object, StackElement<T> linkNextElement) {
+        this.object = object;
+        this.linkNextElement = linkNextElement;
+    }
+}
