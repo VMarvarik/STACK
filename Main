@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        Stack<String> names = new Stack<String>();
+        names.push("Ирина");
+        names.push("Варвара");
+        names.push("Валерий");
+        names.push("Владимир");
+        System.out.println(names.peek());
+        names.pop();
+        System.out.println(names.peek());
+        names.pop();
+        System.out.println(names.peek());
+        names.pop();
+        System.out.println(names.peek());
+        names.pop();
+        System.out.println(names.peek());
+    }
+}
