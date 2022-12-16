@@ -1,0 +1,42 @@
+public class Stack<T> {
+
+        StackElement<T> first;
+        int size = -1;
+
+        public Stack() {
+            this.first = new StackElement<T> (null, null);
+        }
+
+        public void push(T element) {
+            StackElement<T> stackElement = new StackElement<>(element, null);
+            if (first.object == null) {
+                first.object = element;
+            } else {
+                stackElement.linkNextElement = first;
+                first = stackElement;
+                this.size++;
+            }
+        }
+
+        public boolean isEmpty() {
+            return first == null;
+        }
+
+        public Object peek() {
+            if (!isEmpty()) {
+                return first.object;
+            }
+            return 1;
+        }
+
+        public int size() {
+            return this.size;
+        }
+
+        public void pop() {
+            if (!isEmpty()) {
+                this.size--;
+                this.first = this.first.linkNextElement;
+            }
+        }
+    }
